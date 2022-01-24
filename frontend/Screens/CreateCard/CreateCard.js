@@ -21,7 +21,7 @@ const CreateCard = ({ CategoriesData, CardsData, updateCardsData, ...props }) =>
   const [categoryData, setCategoryData] = useState([]);
 
   useEffect(async () => {
-    const resultCategories = await axios("http://192.168.178.77:3000/api/v1/categories");
+    const resultCategories = await axios("http://192.168.2.231:3000/api/v1/categories");
 
     setCategoryData(resultCategories.data)
   }, [])
@@ -35,7 +35,7 @@ const CreateCard = ({ CategoriesData, CardsData, updateCardsData, ...props }) =>
       setSnackBarText('bitte überprüfe deine Eingabe nochmal');
     } else {
       try {
-        const response = await axios.post('http://192.168.178.77:3000/api/v1/cards', {
+        const response = await axios.post('http://192.168.2.231:3000/api/v1/cards', {
           description: descriptionText,
           cardType: selectCardType,
           category: selectCategory

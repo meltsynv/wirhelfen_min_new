@@ -35,4 +35,9 @@ export const TYPO = StyleSheet.create({
         color: COLORS.blackColor,
         lineHeight: 22
     },
+    link: {
+        fontSize: 16,
+        color: COLORS.linkColor,
+        lineHeight: 22
+    },
 });

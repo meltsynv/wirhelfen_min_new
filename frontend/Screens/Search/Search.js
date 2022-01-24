@@ -21,8 +21,8 @@ const Search = ({ ...props }) => {
     const [timer, setTimer] = useState();
 
     useEffect(async () => {
-        const resultCards = await axios("http://192.168.178.77:3000/api/v1/cards");
-        const resultCategories = await axios("http://192.168.178.77:3000/api/v1/categories");
+        const resultCards = await axios("http://192.168.2.231:3000/api/v1/cards");
+        const resultCategories = await axios("http://192.168.2.231:3000/api/v1/categories");
 
         setCardsData(resultCards.data);
         setCategoryData(resultCategories.data)

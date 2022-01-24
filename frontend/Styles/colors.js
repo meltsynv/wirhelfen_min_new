@@ -3,5 +3,6 @@ export const COLORS = {
     blackColor: '#111111',
     bgColor: '#F8F8F8',
     needHelpColor: '#b04015',
-    defaultColor: '#dddddd'
+    defaultColor: '#dddddd',
+    linkColor: '#0000ff',
 }

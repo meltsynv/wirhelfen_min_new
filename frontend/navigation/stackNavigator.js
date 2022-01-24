@@ -13,6 +13,7 @@ import Home from "../Screens/Home/Home";
 import Search from "../Screens/Search/Search";
 import SearchDetails from "../Screens/Search/SearchDetails";
 import Impressum from "../Screens/Impressum/Impressum";
+import Privacy from "../Screens/Privacy/Privacy";
 import Profile from "../Screens/Profile/Profile";
 import CreateCard from "../Screens/CreateCard/CreateCard";
 import CameraScreen from "../Screens/Camera/Camera";
@@ -107,9 +108,20 @@ const ImpressumStackNav = ({ navigation }) => (
     </ImpressumStack.Navigator>
 )
 
+const PrivacyStack = createStackNavigator();
+const PrivacyStackNav = ({ navigation }) => (
+    <PrivacyStack.Navigator screenOption={navHeaderStyle}>
+        <PrivacyStack.Screen
+            name="Privacy"
+            component={Privacy}
+        />
+    </PrivacyStack.Navigator>
+)
+
 export {
     HomeStackNav,
     SearchStackNav,
     ProfileStackNav,
-    ImpressumStackNav
+    ImpressumStackNav,
+    PrivacyStackNav
 };
