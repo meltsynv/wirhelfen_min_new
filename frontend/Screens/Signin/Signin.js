@@ -30,7 +30,7 @@ const Signin = () => {
 
     if (email == emailConfirm && password == passwordConfirm) {
       try {
-        const response = await axios.post('http://192.168.2.231:3000/api/v1/users', {
+        const response = await axios.post('http://192.168.178.77:3000/api/v1/users', {
           firstName: firstName,
           lastName: lastNamem,
           email: email,

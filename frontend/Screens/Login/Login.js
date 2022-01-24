@@ -18,7 +18,7 @@ const Login = ({ navigation, ...props }) => {
   const [snackbarText, setSnackBarText] = useState('');
 
   const handleLoginProcess = async () => {
-    const resultUser = await axios(`http://192.168.2.231:3000/api/v1/users/${emailText}`);
+    const resultUser = await axios(`http://192.168.178.77:3000/api/v1/users/${emailText}`);
 
     if (resultUser.data.length == 0 || resultUser.data[0].password != passwordText) {
       setVisible(true);
