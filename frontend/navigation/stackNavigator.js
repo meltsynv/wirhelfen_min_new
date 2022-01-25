@@ -16,6 +16,7 @@ import Imprint from "../Screens/Imprint/Imprint";
 import Profile from "../Screens/Profile/Profile";
 import CreateCard from "../Screens/CreateCard/CreateCard";
 import CameraScreen from "../Screens/Camera/Camera";
+import Menu from "../Screens/Menu/Menu";
 
 const navHeaderStyle = {
     headerStyle: {
@@ -96,7 +97,6 @@ const ProfileStackNav = ({ userName, ...props }) => (
     </ProfileStack.Navigator>
 )
 
-
 const ImprintStack = createStackNavigator();
 const ImprintStackNav = ({ navigation }) => (
     <ImprintStack.Navigator screenOption={navHeaderStyle}>
@@ -107,9 +107,20 @@ const ImprintStackNav = ({ navigation }) => (
     </ImprintStack.Navigator>
 )
 
+const MenuStack = createStackNavigator();
+const MenuStackNav = ({ navigation }) => (
+    <MenuStack.Navigator screenOption={navHeaderStyle}>
+        <MenuStack.Screen
+            name="Menu"
+            component={Menu}
+        />
+    </MenuStack.Navigator>
+)
+
 export {
     HomeStackNav,
     SearchStackNav,
     ProfileStackNav,
-    ImprintStackNav
+    ImprintStackNav,
+    MenuStackNav
 };
