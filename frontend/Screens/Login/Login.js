@@ -10,6 +10,7 @@ import { COLORS } from '../../Styles/colors';
 
 // styles
 import globalStyle from '../../Styles/globalStyles';
+import ApiUrl from "../../data/globalData";
 
 const Login = ({ navigation, ...props }) => {
   const [emailText, setEmailText] = useState('');
@@ -18,7 +19,7 @@ const Login = ({ navigation, ...props }) => {
   const [snackbarText, setSnackBarText] = useState('');
 
   const handleLoginProcess = async () => {
-    const resultUser = await axios(`http://192.168.178.77:3000/api/v1/users/${emailText}`);
+    const resultUser = await axios(`${ApiUrl}/users/${emailText}`);
 
     if (resultUser.data.length == 0 || resultUser.data[0].password != passwordText) {
       setVisible(true);

@@ -12,6 +12,8 @@ import CategoryFilterSection from './categoryFilterSection';
 import TypeFilterSection from './typeFilterSection';
 import Card from '../../components/Card';
 import axios from 'axios';
+import IpAddress from "../../data/globalData";
+import ApiUrl from "../../data/globalData";
 
 const Search = ({ ...props }) => {
     const [cardsData, setCardsData] = useState([]);
@@ -21,8 +23,8 @@ const Search = ({ ...props }) => {
     const [timer, setTimer] = useState();
 
     useEffect(async () => {
-        const resultCards = await axios("http://192.168.178.77:3000/api/v1/cards");
-        const resultCategories = await axios("http://192.168.178.77:3000/api/v1/categories");
+        const resultCards = await axios(`${ApiUrl}/api/v1/cards`);
+        const resultCategories = await axios(`${ApiUrl}/categories`);
 
         setCardsData(resultCards.data);
         setCategoryData(resultCategories.data)
