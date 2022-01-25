@@ -5,11 +5,11 @@ import { NavigationContainer } from '@react-navigation/native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { createStackNavigator } from "@react-navigation/stack";
 
-import { HomeStackNav, SearchStackNav, ImpressumStackNav, ProfileStackNav } from './stackNavigator';
+import { HomeStackNav, SearchStackNav, ImprintStackNav, ProfileStackNav } from './stackNavigator';
 
 // screens
 import ProfileScreen from '../Screens/Profile/Profile';
-import ImpressumScreen from '../Screens/Impressum/Impressum';
+import ImprintScreen from '../Screens/Imprint/Imprint';
 import { COLORS } from '../Styles/colors';
 import UserData from '../data/User';
 import Login from '../Screens/Login/Login';
@@ -65,7 +65,7 @@ const NastedNavigator = ({ loginState, userData }) => {
                     />
                     <Tab.Screen
                         name="Menu"
-                        component={ImpressumStackNav}
+                        component={ImprintStackNav}
                         options={{
                             tabBarIcon: ({ color, size }) => (
                                 <MaterialCommunityIcons name='menu' color={color} size={26} />
