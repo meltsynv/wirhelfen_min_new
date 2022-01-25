@@ -60,7 +60,7 @@ const Imprint = () => {
           </Text>
           <Text>Musterhausen</Text>
           <Text>
-            Quelle: Erstellt mit dem Imprint Generator von AdSimple in
+            Quelle: Erstellt mit dem Impressum Generator von AdSimple in
             Kooperation mit bauenwir.de
           </Text>
         </View>
@@ -73,7 +73,7 @@ const Imprint = () => {
             Verbraucher haben die Möglichkeit, Beschwerden an die Online
             Streitbeilegungsplattform der Europäischen Kommission unter
             http://ec.europa.eu/odr?tid=321256001 zu richten. Die dafür
-            notwendigen Kontaktdaten finden Sie oberhalb in unserem Imprint. Wir
+            notwendigen Kontaktdaten finden Sie oberhalb in unserem Impressum. Wir
             möchten Sie jedoch darauf hinweisen, dass wir nicht bereit oder
             verpflichtet sind, an Streitbeilegungsverfahren vor einer
             Verbraucherschlichtungsstelle teilzunehmen.
@@ -101,7 +101,7 @@ const Imprint = () => {
             unberührt. Sollten Ihnen problematische oder rechtswidrige Inhalte
             auffallen, bitte wir Sie uns umgehend zu kontaktieren, damit wir die
             rechtswidrigen Inhalte entfernen können. Sie finden die Kontaktdaten
-            im Imprint.
+            im Impressum.
           </Text>
         </View>
         <View style={{ marginBottom: 10 }}>
@@ -116,7 +116,7 @@ const Imprint = () => {
             sind und wir Links sofort entfernen würden, wenn uns
             Rechtswidrigkeiten bekannt werden. Wenn Ihnen rechtswidrige Links auf
             unserer Website auffallen, bitte wir Sie uns zu kontaktieren. Sie
-            finden die Kontaktdaten im Imprint.
+            finden die Kontaktdaten im Impressum.
           </Text>
         </View>
         <View style={{ marginBottom: 10 }}>
