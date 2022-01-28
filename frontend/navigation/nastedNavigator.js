@@ -5,7 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { createStackNavigator } from "@react-navigation/stack";
 
-import {HomeStackNav, SearchStackNav, ImprintStackNav, ProfileStackNav, MenuStackNav} from './stackNavigator';
+import { HomeStackNav, SearchStackNav, ImprintStackNav, ProfileStackNav, MenuStackNav, PrivacyStackNav } from './stackNavigator';
 
 // screens
 import ProfileScreen from '../Screens/Profile/Profile';
@@ -70,6 +70,15 @@ const NastedNavigator = ({ loginState, userData }) => {
                         options={{
                             tabBarIcon: ({ color, size }) => (
                                 <MaterialCommunityIcons name='question' color={color} size={26} />
+                            )
+                        }}
+                    />
+                    <Tab.Screen
+                        name="Privacy"
+                        component={PrivacyStackNav}
+                        options={{
+                            tabBarIcon: ({ color, size }) => (
+                                <MaterialCommunityIcons name='lock' color={color} size={26} />
                             )
                         }}
                     />

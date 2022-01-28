@@ -12,6 +12,7 @@ import { COLORS } from '../Styles/colors';
 import Home from "../Screens/Home/Home";
 import Search from "../Screens/Search/Search";
 import SearchDetails from "../Screens/Search/SearchDetails";
+import Privacy from "../Screens/Privacy/Privacy";
 import Imprint from "../Screens/Imprint/Imprint";
 import Profile from "../Screens/Profile/Profile";
 import CreateCard from "../Screens/CreateCard/CreateCard";
@@ -117,10 +118,21 @@ const MenuStackNav = ({ navigation }) => (
     </MenuStack.Navigator>
 )
 
+const PrivacyStack = createStackNavigator();
+const PrivacyStackNav = ({ navigation }) => (
+    <PrivacyStack.Navigator screenOption={navHeaderStyle}>
+        <PrivacyStack.Screen
+            name="Privacy"
+            component={Privacy}
+        />
+    </PrivacyStack.Navigator>
+)
+
 export {
     HomeStackNav,
     SearchStackNav,
     ProfileStackNav,
+    PrivacyStackNav,
     ImprintStackNav,
     MenuStackNav
 };
