@@ -77,7 +77,7 @@ const NestedNavigator = ({ loginState, userData }) => {
                         component={ImprintStackNav}
                         options={{
                             tabBarIcon: ({ color, size }) => (
-                                <MaterialCommunityIcons name='question' color={color} size={26} />
+                                <MaterialCommunityIcons name='lock' color={color} size={26} />
                             )
                         }}
                     />
@@ -104,7 +104,7 @@ const NestedNavigator = ({ loginState, userData }) => {
                         component={SupportStackNav}
                         options={{
                             tabBarIcon: ({ color, size }) => (
-                                <MaterialCommunityIcons name='question' color={color} size={26} />
+                                <MaterialCommunityIcons name='lock' color={color} size={26} />
                             )
                         }}
                     />
