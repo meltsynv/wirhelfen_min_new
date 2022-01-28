@@ -10,6 +10,7 @@ import { useNavigation } from '@react-navigation/native';
 import axios from 'axios';
 import { Snackbar } from 'react-native-paper';
 import { COLORS } from '../../Styles/colors';
+import ApiUrl from "../../data/globalData";
 
 const CreateCard = ({ CategoriesData, CardsData, updateCardsData, ...props }) => {
   const navigation = useNavigation();
@@ -21,7 +22,7 @@ const CreateCard = ({ CategoriesData, CardsData, updateCardsData, ...props }) =>
   const [categoryData, setCategoryData] = useState([]);
 
   useEffect(async () => {
-    const resultCategories = await axios("http://192.168.178.77:3000/api/v1/categories");
+    const resultCategories = await axios(`${ApiUrl}/categories`);
 
     setCategoryData(resultCategories.data)
   }, [])
@@ -35,7 +36,7 @@ const CreateCard = ({ CategoriesData, CardsData, updateCardsData, ...props }) =>
       setSnackBarText('bitte überprüfe deine Eingabe nochmal');
     } else {
       try {
-        const response = await axios.post('http://192.168.178.77:3000/api/v1/cards', {
+        const response = await axios.post(`${ApiUrl}/cards`, {
           description: descriptionText,
           cardType: selectCardType,
           category: selectCategory

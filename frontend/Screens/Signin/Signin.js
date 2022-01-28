@@ -9,6 +9,7 @@ import { COLORS } from '../../Styles/colors';
 
 // styles
 import globalStyle from '../../Styles/globalStyles';
+import ApiUrl from "../../data/globalData";
 
 const Signin = () => {
   const [firstName, setFirstName] = useState('');
@@ -30,7 +31,7 @@ const Signin = () => {
 
     if (email == emailConfirm && password == passwordConfirm) {
       try {
-        const response = await axios.post('http://192.168.178.77:3000/api/v1/users', {
+        const response = await axios.post(`${ApiUrl}/users`, {
           firstName: firstName,
           lastName: lastNamem,
           email: email,

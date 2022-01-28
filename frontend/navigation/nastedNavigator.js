@@ -5,16 +5,17 @@ import { NavigationContainer } from '@react-navigation/native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { createStackNavigator } from "@react-navigation/stack";
 
-import { HomeStackNav, SearchStackNav, ImpressumStackNav, ProfileStackNav, PrivacyStackNav } from './stackNavigator';
+import { HomeStackNav, SearchStackNav, ImprintStackNav, ProfileStackNav, MenuStackNav, PrivacyStackNav } from './stackNavigator';
 
 // screens
 import ProfileScreen from '../Screens/Profile/Profile';
-import ImpressumScreen from '../Screens/Impressum/Impressum';
+import ImprintScreen from '../Screens/Imprint/Imprint';
 import { COLORS } from '../Styles/colors';
 import UserData from '../data/User';
 import Login from '../Screens/Login/Login';
 import Signin from '../Screens/Signin/Signin';
 import CameraScreen from '../Screens/Camera/Camera';
+import Imprint from "../Screens/Imprint/Imprint";
 
 const Tab = createMaterialBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -63,6 +64,15 @@ const NastedNavigator = ({ loginState, userData }) => {
                             )
                         }}
                     />
+                    <Tab.Screen /* TODO: Hide this tab */
+                        name="Imprint"
+                        component={ImprintStackNav}
+                        options={{
+                            tabBarIcon: ({ color, size }) => (
+                                <MaterialCommunityIcons name='question' color={color} size={26} />
+                            )
+                        }}
+                    />
                     <Tab.Screen
                         name="Privacy"
                         component={PrivacyStackNav}
@@ -74,7 +84,7 @@ const NastedNavigator = ({ loginState, userData }) => {
                     />
                     <Tab.Screen
                         name="Menu"
-                        component={ImpressumStackNav}
+                        component={MenuStackNav}
                         options={{
                             tabBarIcon: ({ color, size }) => (
                                 <MaterialCommunityIcons name='menu' color={color} size={26} />

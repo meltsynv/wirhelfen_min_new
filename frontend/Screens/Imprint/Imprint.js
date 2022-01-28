@@ -5,7 +5,7 @@ import { ScrollView } from 'react-native-gesture-handler';
 // styles
 import globalStyle from '../../Styles/globalStyles';
 
-const Impressum = () => {
+const Imprint = () => {
   return (
     <>
       <ScrollView style={[globalStyle.container, { paddingBottom: 20 }]}>
@@ -145,4 +145,4 @@ const Impressum = () => {
   )
 }
 
-export default Impressum;
+export default Imprint;

@@ -12,11 +12,12 @@ import { COLORS } from '../Styles/colors';
 import Home from "../Screens/Home/Home";
 import Search from "../Screens/Search/Search";
 import SearchDetails from "../Screens/Search/SearchDetails";
-import Impressum from "../Screens/Impressum/Impressum";
 import Privacy from "../Screens/Privacy/Privacy";
+import Imprint from "../Screens/Imprint/Imprint";
 import Profile from "../Screens/Profile/Profile";
 import CreateCard from "../Screens/CreateCard/CreateCard";
 import CameraScreen from "../Screens/Camera/Camera";
+import Menu from "../Screens/Menu/Menu";
 
 const navHeaderStyle = {
     headerStyle: {
@@ -97,15 +98,24 @@ const ProfileStackNav = ({ userName, ...props }) => (
     </ProfileStack.Navigator>
 )
 
-
-const ImpressumStack = createStackNavigator();
-const ImpressumStackNav = ({ navigation }) => (
-    <ImpressumStack.Navigator screenOption={navHeaderStyle}>
-        <ImpressumStack.Screen
-            name="Impressum"
-            component={Impressum}
+const ImprintStack = createStackNavigator();
+const ImprintStackNav = ({ navigation }) => (
+    <ImprintStack.Navigator screenOption={navHeaderStyle}>
+        <ImprintStack.Screen
+            name="Imprint"
+            component={Imprint}
         />
-    </ImpressumStack.Navigator>
+    </ImprintStack.Navigator>
+)
+
+const MenuStack = createStackNavigator();
+const MenuStackNav = ({ navigation }) => (
+    <MenuStack.Navigator screenOption={navHeaderStyle}>
+        <MenuStack.Screen
+            name="Menu"
+            component={Menu}
+        />
+    </MenuStack.Navigator>
 )
 
 const PrivacyStack = createStackNavigator();
@@ -122,6 +132,7 @@ export {
     HomeStackNav,
     SearchStackNav,
     ProfileStackNav,
-    ImpressumStackNav,
-    PrivacyStackNav
+    PrivacyStackNav,
+    ImprintStackNav,
+    MenuStackNav
 };
