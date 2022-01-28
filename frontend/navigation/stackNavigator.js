@@ -18,6 +18,7 @@ import Profile from "../Screens/Profile/Profile";
 import CreateCard from "../Screens/CreateCard/CreateCard";
 import CameraScreen from "../Screens/Camera/Camera";
 import Menu from "../Screens/Menu/Menu";
+import Support from "../Screens/Support/Support";
 
 const navHeaderStyle = {
     headerStyle: {
@@ -128,11 +129,23 @@ const PrivacyStackNav = ({ navigation }) => (
     </PrivacyStack.Navigator>
 )
 
+const SupportStack = createStackNavigator();
+const SupportStackNav = ({ navigation }) => (
+    <SupportStack.Navigator screenOption={navHeaderStyle}>
+        <SupportStack.Screen
+            name="Support"
+            component={Support}
+        />
+    </SupportStack.Navigator>
+)
+
+
 export {
     HomeStackNav,
     SearchStackNav,
     ProfileStackNav,
     PrivacyStackNav,
     ImprintStackNav,
-    MenuStackNav
+    MenuStackNav,
+    SupportStackNav
 };

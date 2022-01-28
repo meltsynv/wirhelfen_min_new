@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import * as Font from 'expo-font';
 import { Text, View } from 'react-native';
-import NastedNavigator from './navigation/nastedNavigator';
+import NastedNavigator from './navigation/nestedNavigator';
 
 import rootReducer from './Redux/Reducers/rootReducer';
 import { createStore } from 'redux';

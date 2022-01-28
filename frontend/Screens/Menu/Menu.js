@@ -12,7 +12,8 @@ const Menu = () => {
       <ScrollView style={[globalStyle.container, { paddingBottom: 20 }]}>
         <View style={{ marginBottom: 10 }}>
             <LinkButton title={'Impressum'} link={'Imprint'} type={'primary'} />
-            {/*<LinkButton title={'Datenschutzerklärung'} link={'Privacy'} type={'primary'} />*/}
+            <LinkButton title={'Datenschutzerklärung'} link={'Privacy'} type={'primary'} />
+            <LinkButton title={'Wie ihr uns unterstützen könnt'} link={'Support'} type={'primary'} />
         </View>
       </ScrollView>
     </>

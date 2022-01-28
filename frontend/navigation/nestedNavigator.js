@@ -5,7 +5,15 @@ import { NavigationContainer } from '@react-navigation/native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { createStackNavigator } from "@react-navigation/stack";
 
-import { HomeStackNav, SearchStackNav, ImprintStackNav, ProfileStackNav, MenuStackNav, PrivacyStackNav } from './stackNavigator';
+import {
+    HomeStackNav,
+    SearchStackNav,
+    ImprintStackNav,
+    ProfileStackNav,
+    MenuStackNav,
+    PrivacyStackNav,
+    SupportStackNav
+} from './stackNavigator';
 
 // screens
 import ProfileScreen from '../Screens/Profile/Profile';
@@ -20,7 +28,7 @@ import Imprint from "../Screens/Imprint/Imprint";
 const Tab = createMaterialBottomTabNavigator();
 const Stack = createStackNavigator();
 
-const NastedNavigator = ({ loginState, userData }) => {
+const NestedNavigator = ({ loginState, userData }) => {
     return (
         <NavigationContainer>
             {loginState ? (
@@ -73,7 +81,7 @@ const NastedNavigator = ({ loginState, userData }) => {
                             )
                         }}
                     />
-                    <Tab.Screen
+                    <Tab.Screen /* TODO: Hide this tab */
                         name="Privacy"
                         component={PrivacyStackNav}
                         options={{
@@ -88,6 +96,15 @@ const NastedNavigator = ({ loginState, userData }) => {
                         options={{
                             tabBarIcon: ({ color, size }) => (
                                 <MaterialCommunityIcons name='menu' color={color} size={26} />
+                            )
+                        }}
+                    />
+                    <Tab.Screen /* TODO: Hide this tab */
+                        name="Support"
+                        component={SupportStackNav}
+                        options={{
+                            tabBarIcon: ({ color, size }) => (
+                                <MaterialCommunityIcons name='question' color={color} size={26} />
                             )
                         }}
                     />
@@ -111,4 +128,4 @@ const mapStateToProps = (state) => {
     };
 };
 
-export default connect(mapStateToProps, null)(NastedNavigator);
+export default connect(mapStateToProps, null)(NestedNavigator);
