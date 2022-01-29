@@ -1,7 +1,6 @@
 import React from 'react';
-import {Button, Linking, Text, TouchableHighlight, View} from 'react-native';
+import {Button, Linking, Text, View, Image, Dimensions} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
-import Icon from 'react-native-vector-icons/FontAwesome';
 
 // styles
 import globalStyle from '../../Styles/globalStyles';
@@ -34,6 +33,10 @@ const Support = () => {
         <View style={TYPO.before_main_title}/>
         <Text style={TYPO.main_title}>{strings.de.Support}</Text>
 
+        <Image source={require('frontend/assets/images/support.png')}
+               style={{width: '100%', height: 300}}
+               resizeMode="contain"/>
+
         <View style={{marginBottom: 50}}>
           <Text style={TYPO.small_heading}>{strings.de.Join1}</Text>
           <Text style={TYPO.paragraph}>{strings.de.Join2}</Text>
@@ -47,8 +50,7 @@ const Support = () => {
         <View style={{marginBottom: 50}}>
           <Text style={TYPO.small_heading}>{strings.de.Financial1}</Text>
           <Text style={TYPO.paragraph}>{strings.de.Financial2}</Text>
-          <Button title={strings.de.Financial3} type={'primary'} icon={
-            <Icon name="arrow-right"/>}
+          <Button title={strings.de.Financial3} // TODO: add icon right-arrow
                   onPress={() => Linking.openURL('https://www.paypal.com/donate?hosted_button_id=WB2FDCDRDXJD4')}/>
         </View>
 

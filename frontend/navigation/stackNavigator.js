@@ -133,7 +133,7 @@ const SupportStack = createStackNavigator();
 const SupportStackNav = ({ navigation }) => (
     <SupportStack.Navigator screenOption={navHeaderStyle}>
         <SupportStack.Screen
-            name="Support"
+            name="SupportScreen "
             component={Support}
         />
     </SupportStack.Navigator>
