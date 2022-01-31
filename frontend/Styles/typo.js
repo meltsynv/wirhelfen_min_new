@@ -33,7 +33,8 @@ export const TYPO = StyleSheet.create({
     small_heading: {
         fontSize: 20,
         color: COLORS.blackColor,
-        marginBottom: 15
+        marginBottom: 15,
+        fontWeight: 'bold'
     },
     paragraph: {
         fontSize: 16,

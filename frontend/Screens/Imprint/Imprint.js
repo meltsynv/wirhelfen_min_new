@@ -4,21 +4,22 @@ import { ScrollView } from 'react-native-gesture-handler';
 
 // styles
 import globalStyle from '../../Styles/globalStyles';
-
+import {TYPO} from "../../Styles/typo";
+  
 const Imprint = () => {
   return (
     <>
       <ScrollView style={[globalStyle.container, { paddingBottom: 20 }]}>
-        <View style={{ marginBottom: 10 }}>
+        <View style={{ marginBottom: 50 }}>
           <Text>Informationspflicht laut § 5 TMG.</Text>
         </View>
-        <View style={{ marginBottom: 10 }}>
+        <View style={{ marginBottom: 50 }}>
           <Text>Covid-19Tracker</Text>
           <Text>Musterstrasse 1, Stiege 1 Tür 1,</Text>
           <Text>12345 Musterhausen,</Text>
           <Text>Deutschland</Text>
         </View>
-        <View style={{ marginBottom: 10 }}>
+        <View style={{ marginBottom: 50 }}>
           <Text>UID-Nummer: DE12345678</Text>
           <Text>Wirtschafts-ID: DE123456789</Text>
           <Text>Register: Handelsregister</Text>
@@ -30,32 +31,32 @@ const Imprint = () => {
           <Text>Fax: 01234/56789-0</Text>
           <Text>E-Mail: office@musterfirma.de</Text>
         </View>
-        <View style={{ marginBottom: 10 }}>
-          <Text style={{ fontWeight: "bold" }}>Aufsichtsbehörde</Text>
+        <View style={{ marginBottom: 50 }}>
+          <Text style={ TYPO.small_heading }>Aufsichtsbehörde</Text>
           <Text>Bezirkshauptmannschaft Musterhausen</Text>
           <Text>Webseite der Aufsichtsbehörde</Text>
           <Text>https://www.aufsichtsbeoerde-musterhausen.de/</Text>
           <Text>Anschrift der Aufsichtsbehörde</Text>
           <Text>Musterweg 1, 12345 Musterhausen</Text>
         </View>
-        <View style={{ marginBottom: 10 }}>
-          <Text style={{ fontWeight: "bold" }}>
+        <View style={{ marginBottom: 50 }}>
+          <Text style={ TYPO.small_heading }>
             Persönlich haftende Gesellschafter (Komplementär) der GmbH & Co KG
           </Text>
           <Text>Frieda Musterkomp</Text>
         </View>
-        <View style={{ marginBottom: 10 }}>
-          <Text style={{ fontWeight: "bold" }}>Geschäftsführer</Text>
+        <View style={{ marginBottom: 50 }}>
+          <Text style={ TYPO.small_heading }>Geschäftsführer</Text>
           <Text>Viktor Meltsyn, Xelia Mattick</Text>
         </View>
-        <View style={{ marginBottom: 10 }}>
-          <Text style={{ fontWeight: "bold" }}>
+        <View style={{ marginBottom: 50 }}>
+          <Text style={ TYPO.small_heading }>
             Registernummer der Komplementär-GmbH:
           </Text>
           <Text>HRB 123456</Text>
         </View>
-        <View style={{ marginBottom: 10 }}>
-          <Text style={{ fontWeight: "bold" }}>
+        <View style={{ marginBottom: 50 }}>
+          <Text style={ TYPO.small_heading }>
             Registergericht der Komplementär-GmbH:
           </Text>
           <Text>Musterhausen</Text>
@@ -64,8 +65,8 @@ const Imprint = () => {
             Kooperation mit bauenwir.de
           </Text>
         </View>
-        <View style={{ marginBottom: 10 }}>
-          <Text style={{ fontWeight: "bold" }}>EU-Streitschlichtung</Text>
+        <View style={{ marginBottom: 50 }}>
+          <Text style={ TYPO.small_heading }>EU-Streitschlichtung</Text>
           <Text>
             Gemäß Verordnung über Online-Streitbeilegung in
             Verbraucherangelegenheiten (ODR-Verordnung) möchten wir Sie über die
@@ -79,8 +80,8 @@ const Imprint = () => {
             Verbraucherschlichtungsstelle teilzunehmen.
           </Text>
         </View>
-        <View style={{ marginBottom: 10 }}>
-          <Text style={{ fontWeight: "bold" }}>
+        <View style={{ marginBottom: 50 }}>
+          <Text style={ TYPO.small_heading }>
             Haftung für Inhalte dieser Website
           </Text>
           <Text>
@@ -104,8 +105,8 @@ const Imprint = () => {
             im Impressum.
           </Text>
         </View>
-        <View style={{ marginBottom: 10 }}>
-          <Text style={{ fontWeight: "bold" }}>
+        <View style={{ marginBottom: 50 }}>
+          <Text style={ TYPO.small_heading }>
             Haftung für Links auf dieser Website
           </Text>
           <Text>
@@ -119,8 +120,8 @@ const Imprint = () => {
             finden die Kontaktdaten im Impressum.
           </Text>
         </View>
-        <View style={{ marginBottom: 10 }}>
-          <Text style={{ fontWeight: "bold" }}>Urheberrechtshinweis</Text>
+        <View style={{ marginBottom: 50 }}>
+          <Text style={ TYPO.small_heading }>Urheberrechtshinweis</Text>
           <Text>
             Alle Inhalte dieser Webseite (Bilder, Fotos, Texte, Videos)
             unterliegen dem Urheberrecht der Bundesrepublik Deutschland. Bitte
@@ -133,7 +134,7 @@ const Imprint = () => {
           </Text>
         </View>
         <View style={{ marginBottom: 20 }}>
-          <Text style={{ fontWeight: "bold" }}>Bildernachweis</Text>
+          <Text style={ TYPO.small_heading }>Bildernachweis</Text>
           <Text>
             Die Bilder, Fotos und Grafiken auf dieser Webseite sind
             urheberrechtlich geschützt. Die Bilderrechte liegen bei den folgenden

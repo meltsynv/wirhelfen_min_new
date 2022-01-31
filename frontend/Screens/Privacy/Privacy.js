@@ -203,15 +203,13 @@ const Privacy = () => {
                 <View style={TYPO.before_main_title}/>
                 <Text style={TYPO.main_title}>{strings.de.Statement}</Text>
 
-                <View style={{marginBottom: 10}}>
-                    <View style={TYPO.before_sub_title}/>
-                    <Text style={TYPO.sub_title}>{strings.de.Introduction}</Text>
+                <View style={{marginBottom: 50}}>
+                    <Text style={TYPO.small_heading}>{strings.de.Introduction}</Text>
                     <Text style={TYPO.paragraph}>{strings.de.Introduction1}</Text>
                 </View>
 
-                <View style={{marginBottom: 10}}>
-                    <View style={TYPO.before_sub_title}/>
-                    <Text style={TYPO.sub_title}>{strings.de.ResponsiblePerson}</Text>
+                <View style={{marginBottom: 50}}>
+                    <Text style={TYPO.small_heading}>{strings.de.ResponsiblePerson}</Text>
                     <Text style={TYPO.paragraph}>WirHelfen gGmbH</Text>
                     <Text style={TYPO.paragraph}>Kistlerhofstr. 70 I Haus 2</Text>
                     <Text style={TYPO.paragraph}>81379 München</Text>
@@ -220,9 +218,8 @@ const Privacy = () => {
                     <Text style={TYPO.paragraph}>+49 89 93909910</Text>
                 </View>
 
-                <View style={{marginBottom: 10}}>
-                    <View style={TYPO.before_sub_title}/>
-                    <Text style={TYPO.sub_title}>{strings.de.DpoContact}</Text>
+                <View style={{marginBottom: 50}}>
+                    <Text style={TYPO.small_heading}>{strings.de.DpoContact}</Text>
                     <Text style={TYPO.paragraph}>Proliance GmbH / <Text style={TYPO.link}
                                                                         onPress={() => Linking.openURL('https://www.datenschutzexperte.de')}>www.datenschutzexperte.de</Text></Text>
                     <Text style={TYPO.paragraph}>Datenschutzexperte</Text>
@@ -232,15 +229,13 @@ const Privacy = () => {
                           onPress={() => Linking.openURL('mailto:datenschutzbeauftragter@datenschutzexperte.de')}>datenschutzbeauftragter@datenschutzexperte.de</Text>
                 </View>
 
-                <View style={{marginBottom: 10}}>
-                    <View style={TYPO.before_sub_title}/>
-                    <Text style={TYPO.sub_title}>{strings.de.Terms}</Text>
+                <View style={{marginBottom: 50}}>
+                    <Text style={TYPO.small_heading}>{strings.de.Terms}</Text>
                     <Text style={TYPO.paragraph}>{strings.de.Terms1}</Text>
                 </View>
 
-                <View style={{marginBottom: 10}}>
-                    <View style={TYPO.before_sub_title}/>
-                    <Text style={TYPO.sub_title}>{strings.de.Logs}</Text>
+                <View style={{marginBottom: 50}}>
+                    <Text style={TYPO.small_heading}>{strings.de.Logs}</Text>
                     <Text style={TYPO.paragraph}>{strings.de.Logs1}</Text>
                     <Unorderedlist><Text style={TYPO.paragraph}>{strings.de.Logs1_1}</Text></Unorderedlist>
                     <Unorderedlist><Text style={TYPO.paragraph}>{strings.de.Logs1_2}</Text></Unorderedlist>
@@ -253,9 +248,8 @@ const Privacy = () => {
                     <Text style={TYPO.paragraph}>{strings.de.Logs3}</Text>
                 </View>
 
-                <View style={{marginBottom: 10}}>
-                    <View style={TYPO.before_sub_title}/>
-                    <Text style={TYPO.sub_title}>{strings.de.Cookies}</Text>
+                <View style={{marginBottom: 50}}>
+                    <Text style={TYPO.small_heading}>{strings.de.Cookies}</Text>
                     <Text style={TYPO.paragraph}>{strings.de.Cookies2}</Text>
                     <Text style={TYPO.paragraph}>{strings.de.Cookies3}</Text>
                     <Text style={TYPO.paragraph}>{strings.de.Cookies4}</Text>
@@ -313,24 +307,21 @@ const Privacy = () => {
                 https://github.com/WirHelfen-eu/flood/issues/58
                 <Text style={TYPO.paragraph}>{ strings.de.CookieSettings1 }</Text>--> */}
 
-                <View style={{marginBottom: 10}}>
-                    <View style={TYPO.before_sub_title}/>
-                    <Text style={TYPO.sub_title}>{strings.de.Contact}</Text>
+                <View style={{marginBottom: 50}}>
+                    <Text style={TYPO.small_heading}>{strings.de.Contact}</Text>
                     <Text style={TYPO.paragraph}>{strings.de.Contact1}</Text>
                 </View>
 
-                <View style={{marginBottom: 10}}>
-                    <View style={TYPO.before_sub_title}/>
-                    <Text style={TYPO.sub_title}>{strings.de.Registration}</Text>
+                <View style={{marginBottom: 50}}>
+                    <Text style={TYPO.small_heading}>{strings.de.Registration}</Text>
                     <Text style={TYPO.paragraph}>{strings.de.Registration1}</Text>
                     <Unorderedlist><Text style={TYPO.paragraph}>{strings.de.Registration1_1}</Text></Unorderedlist>
                     <Unorderedlist><Text style={TYPO.paragraph}>{strings.de.Registration1_2}</Text></Unorderedlist>
                     <Text style={TYPO.paragraph}>{strings.de.Registration2}</Text>
                 </View>
 
-                <View style={{marginBottom: 10}}>
-                    <View style={TYPO.before_sub_title}/>
-                    <Text style={TYPO.sub_title}>{strings.de.Newsletter}</Text>
+                <View style={{marginBottom: 50}}>
+                    <Text style={TYPO.small_heading}>{strings.de.Newsletter}</Text>
                     <Text style={TYPO.paragraph}>{strings.de.Newsletter1}</Text>
                     <Text style={TYPO.paragraph}>{strings.de.Newsletter2}</Text>
                     <Text style={TYPO.paragraph}>{strings.de.Newsletter3}</Text>
@@ -338,9 +329,8 @@ const Privacy = () => {
                     <Text style={TYPO.paragraph}>{strings.de.Newsletter5}</Text>
                 </View>
 
-                <View style={{marginBottom: 10}}>
-                    <View style={TYPO.before_sub_title}/>
-                    <Text style={TYPO.sub_title}>{strings.de.GoogleAnalytics}</Text>
+                <View style={{marginBottom: 50}}>
+                    <Text style={TYPO.small_heading}>{strings.de.GoogleAnalytics}</Text>
                     <Text style={TYPO.paragraph}>{strings.de.GoogleAnalytics1}</Text>
                     <Text style={TYPO.paragraph}>{strings.de.GoogleAnalytics2}</Text>
                     <Text style={TYPO.paragraph}>{strings.de.GoogleAnalytics3}</Text>
@@ -360,9 +350,8 @@ const Privacy = () => {
                     </Text>
                 </View>
 
-                <View style={{marginBottom: 10}}>
-                    <View style={TYPO.before_sub_title}/>
-                    <Text style={TYPO.sub_title}>Google Maps</Text>
+                <View style={{marginBottom: 50}}>
+                    <Text style={TYPO.small_heading}>Google Maps</Text>
                     <Text style={TYPO.paragraph}>Unsere Homepage nutzt über eine Schnittstelle den
                         Online-Kartendienstanbieter Google Maps.
                         Dadurch können wir im Umkreis der suchenden Person Helfer oder Hilfesuchende besser bestimmen.
@@ -392,9 +381,8 @@ const Privacy = () => {
                 </View>
 
 
-                <View style={{marginBottom: 10}}>
-                    <View style={TYPO.before_sub_title}/>
-                    <Text style={TYPO.sub_title}>{strings.de.Receiver}</Text>
+                <View style={{marginBottom: 50}}>
+                    <Text style={TYPO.small_heading}>{strings.de.Receiver}</Text>
                     <Text style={TYPO.paragraph}>{strings.de.Receiver1}</Text>
                     <Unorderedlist><Text style={TYPO.paragraph}>{strings.de.Receiver1_1}</Text></Unorderedlist>
                     <Unorderedlist><Text style={TYPO.paragraph}>{strings.de.Receiver1_2}</Text></Unorderedlist>
@@ -404,21 +392,18 @@ const Privacy = () => {
                     <Text style={TYPO.paragraph}>{strings.de.Receiver2}</Text>
                 </View>
 
-                <View style={{marginBottom: 10}}>
-                    <View style={TYPO.before_sub_title}/>
-                    <Text style={TYPO.sub_title}>{strings.de.Security}</Text>
+                <View style={{marginBottom: 50}}>
+                    <Text style={TYPO.small_heading}>{strings.de.Security}</Text>
                     <Text style={TYPO.paragraph}>{strings.de.Security1}</Text>
                 </View>
 
-                <View style={{marginBottom: 10}}>
-                    <View style={TYPO.before_sub_title}/>
-                    <Text style={TYPO.sub_title}>{strings.de.Storage}</Text>
+                <View style={{marginBottom: 50}}>
+                    <Text style={TYPO.small_heading}>{strings.de.Storage}</Text>
                     <Text style={TYPO.paragraph}>{strings.de.Storage1}</Text>
                 </View>
 
-                <View style={{marginBottom: 10}}>
-                    <View style={TYPO.before_sub_title}/>
-                    <Text style={TYPO.sub_title}>{strings.de.YourRights}</Text>
+                <View style={{marginBottom: 50}}>
+                    <Text style={TYPO.small_heading}>{strings.de.YourRights}</Text>
                     <Text style={TYPO.paragraph}>{strings.de.YourRights1}</Text>
                     <Unorderedlist><Text style={TYPO.paragraph}>{strings.de.YourRights1_1}</Text></Unorderedlist>
                     <Unorderedlist><Text style={TYPO.paragraph}>{strings.de.YourRights1_2}</Text></Unorderedlist>
@@ -429,9 +414,8 @@ const Privacy = () => {
                     <Unorderedlist><Text style={TYPO.paragraph}>{strings.de.YourRights1_7}</Text></Unorderedlist>
                 </View>
 
-                <View style={{marginBottom: 10}}>
-                    <View style={TYPO.before_sub_title}/>
-                    <Text style={TYPO.sub_title}>{strings.de.Objection}</Text>
+                <View style={{marginBottom: 50}}>
+                    <Text style={TYPO.small_heading}>{strings.de.Objection}</Text>
                     <Text style={{fontWeight: "bold"}}>{strings.de.Objection1}</Text>
                     <Text style={TYPO.paragraph}>
                         {strings.de.Objection2}
@@ -440,15 +424,13 @@ const Privacy = () => {
                     </Text>
                 </View>
 
-                <View style={{marginBottom: 10}}>
-                    <View style={TYPO.before_sub_title}/>
-                    <Text style={TYPO.sub_title}>{strings.de.ExternalLinks}</Text>
+                <View style={{marginBottom: 50}}>
+                    <Text style={TYPO.small_heading}>{strings.de.ExternalLinks}</Text>
                     <Text style={TYPO.paragraph}>{strings.de.ExternalLinks1}</Text>
                 </View>
 
-                <View style={{marginBottom: 10}}>
-                    <View style={TYPO.before_sub_title}/>
-                    <Text style={TYPO.sub_title}>{strings.de.Changes}</Text>
+                <View style={{marginBottom: 50}}>
+                    <Text style={TYPO.small_heading}>{strings.de.Changes}</Text>
                     <Text style={TYPO.paragraph}>{strings.de.Changes1}</Text>
                 </View>
 
