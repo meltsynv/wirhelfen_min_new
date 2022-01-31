@@ -19,6 +19,7 @@ import CreateCard from "../Screens/CreateCard/CreateCard";
 import CameraScreen from "../Screens/Camera/Camera";
 import Menu from "../Screens/Menu/Menu";
 import Support from "../Screens/Support/Support";
+import Story from "../Screens/Story/Story";
 
 const navHeaderStyle = {
     headerStyle: {
@@ -139,6 +140,16 @@ const SupportStackNav = ({ navigation }) => (
     </SupportStack.Navigator>
 )
 
+const StoryStack = createStackNavigator();
+const StoryStackNav = ({ navigation }) => (
+    <SupportStack.Navigator screenOption={navHeaderStyle}>
+        <SupportStack.Screen
+            name="Story "
+            component={Story}
+        />
+    </SupportStack.Navigator>
+)
+
 
 export {
     HomeStackNav,
@@ -147,5 +158,6 @@ export {
     PrivacyStackNav,
     ImprintStackNav,
     MenuStackNav,
-    SupportStackNav
+    SupportStackNav,
+    StoryStackNav,
 };

@@ -43,8 +43,8 @@ const Support = () => {
         </View>
 
         <View style={{marginBottom: 50}}>
-          <Text style={TYPO.small_heading}>{strings.de.Report1_1} <Text style={TYPO.wirhelfen_name}>WirHelfen</Text> {strings.de.Report1_2}</Text>
-          <Text style={TYPO.paragraph}>{strings.de.Report2_1} <Text style={TYPO.wirhelfen_name}>WirHelfen</Text> {strings.de.Report2_2}</Text>
+          <Text style={TYPO.small_heading}>{strings.de.Report1_1} <Text style={TYPO.highlight}>WirHelfen</Text> {strings.de.Report1_2}</Text>
+          <Text style={TYPO.paragraph}>{strings.de.Report2_1} <Text style={TYPO.highlight}>WirHelfen</Text> {strings.de.Report2_2}</Text>
         </View>
 
         <View style={{marginBottom: 50}}>

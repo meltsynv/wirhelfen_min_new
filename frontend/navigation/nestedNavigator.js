@@ -12,7 +12,8 @@ import {
     ProfileStackNav,
     MenuStackNav,
     PrivacyStackNav,
-    SupportStackNav
+    SupportStackNav,
+    StoryStackNav
 } from './stackNavigator';
 
 // screens
@@ -102,6 +103,15 @@ const NestedNavigator = ({ loginState, userData }) => {
                     <Tab.Screen /* TODO: Hide this tab */
                         name="Support"
                         component={SupportStackNav}
+                        options={{
+                            tabBarIcon: ({ color, size }) => (
+                                <MaterialCommunityIcons name='lock' color={color} size={26} />
+                            )
+                        }}
+                    />
+                    <Tab.Screen /* TODO: Hide this tab */
+                        name="Story"
+                        component={StoryStackNav}
                         options={{
                             tabBarIcon: ({ color, size }) => (
                                 <MaterialCommunityIcons name='lock' color={color} size={26} />

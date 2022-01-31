@@ -39,15 +39,16 @@ export const TYPO = StyleSheet.create({
     paragraph: {
         fontSize: 16,
         color: COLORS.blackColor,
-        lineHeight: 22
+        lineHeight: 22,
+        marginBottom: 10,
     },
     link: {
         fontSize: 16,
         color: COLORS.linkColor,
         lineHeight: 22
     },
-    wirhelfen_name: {
+    highlight: {
         color: COLORS.primaryColor,
-        fontWeight: '500',
+        fontWeight: 'bold'
     },
 });
