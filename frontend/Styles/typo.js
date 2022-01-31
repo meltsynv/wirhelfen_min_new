@@ -30,6 +30,12 @@ export const TYPO = StyleSheet.create({
         borderRadius: 5,
         marginBottom: 2
     },
+    small_heading: {
+        fontSize: 20,
+        color: COLORS.blackColor,
+        marginBottom: 15,
+        fontWeight: 'bold'
+    },
     paragraph: {
         fontSize: 16,
         color: COLORS.blackColor,
@@ -39,5 +45,9 @@ export const TYPO = StyleSheet.create({
         fontSize: 16,
         color: COLORS.linkColor,
         lineHeight: 22
+    },
+    wirhelfen_name: {
+        color: COLORS.primaryColor,
+        fontWeight: '500',
     },
 });
