@@ -10,7 +10,7 @@ import { COLORS } from '../../Styles/colors';
 
 // styles
 import globalStyle from '../../Styles/globalStyles';
-import ApiUrl from "../../data/globalData";
+import ApiUrl from "../../data/localConfiguration";
 
 const Login = ({ navigation, ...props }) => {
   const [emailText, setEmailText] = useState('');

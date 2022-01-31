@@ -10,7 +10,7 @@ import { useNavigation } from '@react-navigation/native';
 import axios from 'axios';
 import { Snackbar } from 'react-native-paper';
 import { COLORS } from '../../Styles/colors';
-import ApiUrl from "../../data/globalData";
+import ApiUrl from "../../data/localConfiguration";
 
 const CreateCard = ({ CategoriesData, CardsData, updateCardsData, ...props }) => {
   const navigation = useNavigation();

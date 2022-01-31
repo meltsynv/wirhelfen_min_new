@@ -9,7 +9,7 @@ import { COLORS } from '../../Styles/colors';
 
 // styles
 import globalStyle from '../../Styles/globalStyles';
-import ApiUrl from "../../data/globalData";
+import ApiUrl from "../../data/localConfiguration";
 
 const Signin = () => {
   const [firstName, setFirstName] = useState('');

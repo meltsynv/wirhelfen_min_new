@@ -12,8 +12,8 @@ import CategoryFilterSection from './categoryFilterSection';
 import TypeFilterSection from './typeFilterSection';
 import Card from '../../components/Card';
 import axios from 'axios';
-import IpAddress from "../../data/globalData";
-import ApiUrl from "../../data/globalData";
+import IpAddress from "../../data/localConfiguration";
+import ApiUrl from "../../data/localConfiguration";
 
 const Search = ({ ...props }) => {
     const [cardsData, setCardsData] = useState([]);
