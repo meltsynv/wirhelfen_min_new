@@ -20,6 +20,7 @@ import CameraScreen from "../Screens/Camera/Camera";
 import Menu from "../Screens/Menu/Menu";
 import Support from "../Screens/Support/Support";
 import Story from "../Screens/Story/Story";
+import Behavior from "../Screens/Behavior/Behavior";
 
 const navHeaderStyle = {
     headerStyle: {
@@ -150,6 +151,16 @@ const StoryStackNav = ({ navigation }) => (
     </SupportStack.Navigator>
 )
 
+const BehaviorStack = createStackNavigator();
+const BehaviorStackNav = ({ navigation }) => (
+    <SupportStack.Navigator screenOption={navHeaderStyle}>
+        <SupportStack.Screen
+            name="Behavior "
+            component={Behavior}
+        />
+    </SupportStack.Navigator>
+)
+
 
 export {
     HomeStackNav,
@@ -160,4 +171,5 @@ export {
     MenuStackNav,
     SupportStackNav,
     StoryStackNav,
+    BehaviorStackNav,
 };
