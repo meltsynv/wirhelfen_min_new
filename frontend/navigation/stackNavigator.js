@@ -36,7 +36,7 @@ const HomeStack = createStackNavigator();
 const HomeStackNav = ({ navigation }) => (
     <HomeStack.Navigator screenOptions={navHeaderStyle}>
         <HomeStack.Screen
-            name="WirHelfenScreen"
+            name="WirHelfen "
             component={Home}
             options={{
                 headerLeft: () => (
@@ -53,7 +53,7 @@ const SearchStack = createStackNavigator();
 const SearchStackNav = ({ navigation }) => (
     <SearchStack.Navigator screenOption={navHeaderStyle}>
         <SearchStack.Screen
-            name="SearchScreen"
+            name="Search "
             component={Search}
             options={{
                 headerLeft: () => (
@@ -68,7 +68,7 @@ const SearchStackNav = ({ navigation }) => (
             component={SearchDetails}
         />
         <SearchStack.Screen
-            name="CreateCardScreen"
+            name="CreateCard "
             component={CreateCard}
             options={{
                 title: 'Beitrag Erstellen'
@@ -93,7 +93,7 @@ const ProfileStackNav = ({ userName, ...props }) => (
             }}
         />
         <ProfileStack.Screen
-            name='CameraScreen'
+            name='Camera '
             component={CameraScreen}
         />
     </ProfileStack.Navigator>
@@ -103,7 +103,7 @@ const ImprintStack = createStackNavigator();
 const ImprintStackNav = ({ navigation }) => (
     <ImprintStack.Navigator screenOption={navHeaderStyle}>
         <ImprintStack.Screen
-            name="ImprintScreen"
+            name="Imprint "
             component={Imprint}
         />
     </ImprintStack.Navigator>
@@ -113,7 +113,7 @@ const MenuStack = createStackNavigator();
 const MenuStackNav = ({ navigation }) => (
     <MenuStack.Navigator screenOption={navHeaderStyle}>
         <MenuStack.Screen
-            name="MenuScreen"
+            name="Menu "
             component={Menu}
         />
     </MenuStack.Navigator>
@@ -123,7 +123,7 @@ const PrivacyStack = createStackNavigator();
 const PrivacyStackNav = ({ navigation }) => (
     <PrivacyStack.Navigator screenOption={navHeaderStyle}>
         <PrivacyStack.Screen
-            name="PrivacyScreen"
+            name="Privacy "
             component={Privacy}
         />
     </PrivacyStack.Navigator>
@@ -133,7 +133,7 @@ const SupportStack = createStackNavigator();
 const SupportStackNav = ({ navigation }) => (
     <SupportStack.Navigator screenOption={navHeaderStyle}>
         <SupportStack.Screen
-            name="SupportScreen"
+            name="Support "
             component={Support}
         />
     </SupportStack.Navigator>

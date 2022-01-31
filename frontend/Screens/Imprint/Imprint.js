@@ -5,7 +5,7 @@ import { ScrollView } from 'react-native-gesture-handler';
 // styles
 import globalStyle from '../../Styles/globalStyles';
 import {TYPO} from "../../Styles/typo";
-  
+
 const Imprint = () => {
   return (
     <>
