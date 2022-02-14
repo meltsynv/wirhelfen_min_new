@@ -1,5 +1,5 @@
 import React from 'react'
-import { connect } from 'react-redux';
+import { connect, useSelector } from 'react-redux';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -19,7 +19,9 @@ import CameraScreen from '../Screens/Camera/Camera';
 const Tab = createMaterialBottomTabNavigator();
 const Stack = createStackNavigator();
 
-const NastedNavigator = ({ loginState, userData }) => {
+export default function NastedNavigator  ()  {
+    const loginState = useSelector(state => state.login.loginState);
+    const userData = useSelector(state => state.login.userData);
     return (
         <NavigationContainer>
             {loginState ? (
@@ -72,6 +74,7 @@ const NastedNavigator = ({ loginState, userData }) => {
                             )
                         }}
                     />
+                    
                 </Tab.Navigator>
 
             ) : (
@@ -85,11 +88,6 @@ const NastedNavigator = ({ loginState, userData }) => {
     )
 }
 
-const mapStateToProps = (state) => {
-    return {
-        loginState: state.loginState,
-        userData: state.userData
-    };
-};
 
-export default connect(mapStateToProps, null)(NastedNavigator);
+
+//export default connect(null, null)(NastedNavigator);

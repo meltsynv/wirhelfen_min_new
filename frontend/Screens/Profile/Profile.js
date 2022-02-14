@@ -1,13 +1,14 @@
 import React from 'react';
 import { Text, View } from 'react-native';
-import { connect } from 'react-redux';
+import { connect, useSelector } from 'react-redux';
 import LinkButton from '../../components/LinkButton';
 
 // styles
 import globalStyle from '../../Styles/globalStyles';
 import profileStyle from './profileStyle';
 
-const Profile = ({ userData }) => {
+const Profile = () => {
+    const userData = useSelector(state => state.login.userData)
     return (
         <>
             <View style={globalStyle.container}>
@@ -20,10 +21,6 @@ const Profile = ({ userData }) => {
     )
 }
 
-const mapStateToProps = (state) => {
-    return {
-        userData: state.userData
-    };
-};
 
-export default connect(mapStateToProps, null)(Profile);
+
+export default Profile;

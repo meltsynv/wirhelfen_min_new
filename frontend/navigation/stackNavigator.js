@@ -43,6 +43,16 @@ const HomeStackNav = ({ navigation }) => (
                 )
             }}
         />
+        
+        <HomeStack.Screen
+            name="CreateCard"
+            component={CreateCard}
+            options={{
+                title: 'Beitrag Erstellen'
+            }}
+        />
+        
+       
     </HomeStack.Navigator>
 )
 
@@ -64,13 +74,7 @@ const SearchStackNav = ({ navigation }) => (
             name="SearchDetails"
             component={SearchDetails}
         />
-        <SearchStack.Screen
-            name="CreateCard"
-            component={CreateCard}
-            options={{
-                title: 'Beitrag Erstellen'
-            }}
-        />
+        
     </SearchStack.Navigator>
 )
 
@@ -78,7 +82,7 @@ const ProfileStack = createStackNavigator();
 const ProfileStackNav = ({ userName, ...props }) => (
     <ProfileStack.Navigator screenOption={navHeaderStyle}>
         <ProfileStack.Screen
-            name='Profile'
+            name='ProfileScreen'
             component={Profile}
             options={{
                 title: `Hallo ${userName}`,

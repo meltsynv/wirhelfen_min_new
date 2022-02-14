@@ -12,9 +12,9 @@ const SearchDetails = ({ route, navigation }) => {
   return (
     <>
       <ScrollView style={globalStyle.container}>
-        <Text>{type}</Text>
-        <Text>{description}</Text>
-        <Text>{category}</Text>
+        <Text>Hilfesuche/Hilfeleistung: :{type}</Text>
+        <Text>Art: {category}</Text>
+        <Text>Beschreibung: {description}</Text>
       </ScrollView>
     </>
   )

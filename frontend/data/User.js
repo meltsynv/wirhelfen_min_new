@@ -6,7 +6,8 @@ const UserData = {
   zip: null,
   email: 'viktor',
   password: 123,
-  imagePath: ''
+  imagePath: '',
+  
 }
 
 export default UserData;

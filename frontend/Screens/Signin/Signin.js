@@ -5,6 +5,7 @@ import { Text, TextInput, View, Button } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import { Snackbar } from 'react-native-paper';
 import LinkButton from '../../components/LinkButton';
+import { LOGIN_URI } from '../../db_data';
 import { COLORS } from '../../Styles/colors';
 
 // styles
@@ -29,18 +30,14 @@ const Signin = () => {
   const handleRergistrationProcess = async (event) => {
 
     if (email == emailConfirm && password == passwordConfirm) {
-      try {
-        const response = await axios.post('http://192.168.178.77:3000/api/v1/users', {
-          firstName: firstName,
-          lastName: lastNamem,
-          email: email,
-          password: password,
-          coronaCertificate: ''
-        });
-      } catch (error) {
-        console.log(error)
+      const new_user = {
+        firstName: firstName,
+        lastName: lastNamem,
+        email: email,
+        coronaCertificate: coronaCertification,
+        password: password,
       }
-
+      await axios.post(LOGIN_URI + 'users', new_user );
       navigation.navigate('Login');
     } else {
       setVisible(true);

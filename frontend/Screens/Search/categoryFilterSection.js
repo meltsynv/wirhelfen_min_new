@@ -4,21 +4,15 @@ import { connect } from 'react-redux';
 import CustomChip from '../../components/CustomChips';
 
 
-const CategoryFilterSection = ({ categoryData, ...props }) => {
+export default function CategoryFilterSection ({ categoryData, addfilter, }) {
 
+  
   return (
     <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={{ marginBottom: 30 }}>
       {categoryData.map(data => (
-        <CustomChip key={data._id} name={data.name} />
+        <CustomChip key={data._id} name={data.name} addFilter={addfilter} />
       ))}
     </ScrollView>
   )
 }
 
-const mapStateToProps = (state) => {
-  return {
-    CategoriesData: state.categoriesData
-  };
-};
-
-export default connect(mapStateToProps, null)(CategoryFilterSection);

@@ -1,18 +1,12 @@
-import { createStore, applyMiddleware, compose } from 'redux';
-import thunk from 'redux-thunk';
+import { configureStore } from '@reduxjs/toolkit'
+import loginSlice from './reducers/loginSlice'
+import cardSlice from './reducers/cardsSlice'
+import categoriesSlice from './reducers/categoriesSlice'
 
-import rootReducer from "../Redux/Reducers/rootReducer";
-
-const initialState = {};
-const middleware = [thunk];
-
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-
-const store = createStore(
-  rootReducer,
-  initialState,
-  applyMiddleware(...middleware)
-);
-
-export default store;
-
+export default configureStore ( {
+  reducer: {
+    cards: cardSlice,
+    categories: categoriesSlice,
+    login: loginSlice,
+  }
+})

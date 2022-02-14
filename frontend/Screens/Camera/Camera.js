@@ -8,11 +8,11 @@ const CameraScreen = () => {
   const [type, setType] = useState(Camera.Constants.Type.back);
   const cameraRef = useRef(null);
 
-  useEffect(() => {
-    (async () => {
+  useEffect(
+    async () => {
       const { status } = await Camera.requestCameraPermissionsAsync();
       setHasPermission(status === 'granted');
-    })();
+    
   }, []);
 
   if (hasPermission === null) {
@@ -60,7 +60,7 @@ const CameraScreen = () => {
                 const r = await takePhoto()
                 // return image object to store in the database 
                 Alert.alert("DEBUG", JSON.stringify(r))
-                console.log(r)
+                console.log(r.uri)
               }}
             >
               <Text style={styles.text}> Photo </Text>

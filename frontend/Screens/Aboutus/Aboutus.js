@@ -1,3 +1,4 @@
+/** 
 import React from 'react';
 import { Text } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
@@ -16,4 +17,4 @@ const Aboutus = () => {
   )
 }
 
-export default Aboutus;
+export default Aboutus;*/

@@ -1,3 +1,5 @@
+/**
+
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -39,4 +41,4 @@ const LoginProcessStackNav = ({ userName, ...props }) => (
 
 export {
   LoginProcessStackNav
-};
+}; */

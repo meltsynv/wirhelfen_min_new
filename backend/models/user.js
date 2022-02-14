@@ -11,15 +11,16 @@ const userSchema = mongoose.Schema({
     },
     email: {
         type: String,
-        required: true
+        required: true,
+        unique:true,
     },
     password: {
         type: String,
-        required: true
     },
     coronaCertificate: {
         type: String,
-    }
+    },
+    
 })
 
 exports.User = mongoose.model('User', userSchema);

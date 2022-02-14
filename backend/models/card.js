@@ -15,7 +15,22 @@ const cardSchema = mongoose.Schema({
     },
     cardType: {
         type: String,
+    },
+    sender:{
+        type: Object,
+        required: true,
+    },
+    postdate: {
+        type: Date,
+        default: Date.now()
+    },
+    answered_users:{
+        type: Array,
+        default: [],
+        required: false,
     }
+
+
 })
 
 exports.Card = mongoose.model('Card', cardSchema);

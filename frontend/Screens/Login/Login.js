@@ -1,24 +1,27 @@
-import { useNavigation } from '@react-navigation/native';
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, {  useEffect, useState } from 'react';
 import { Text, TextInput, View, Button } from 'react-native';
 import { Snackbar } from 'react-native-paper';
-import { connect } from 'react-redux';
+import { connect, useDispatch } from 'react-redux';
 import LinkButton from '../../components/LinkButton';
 
 import { COLORS } from '../../Styles/colors';
 
+import { LOGIN_URI } from '../../db_data'
+
 // styles
 import globalStyle from '../../Styles/globalStyles';
+import { set_login, set_userData } from '../../Store/reducers/loginSlice';
 
-const Login = ({ navigation, ...props }) => {
+export default function Login  ()  {
   const [emailText, setEmailText] = useState('');
   const [passwordText, setPasswordText] = useState('');
   const [visible, setVisible] = useState(false);
   const [snackbarText, setSnackBarText] = useState('');
+  const dispatch = useDispatch()
 
   const handleLoginProcess = async () => {
-    const resultUser = await axios(`http://192.168.178.77:3000/api/v1/users/${emailText}`);
+    const resultUser = await axios(LOGIN_URI +`users/${emailText}`);
 
     if (resultUser.data.length == 0 || resultUser.data[0].password != passwordText) {
       setVisible(true);
@@ -28,10 +31,10 @@ const Login = ({ navigation, ...props }) => {
         setVisible(true);
         setSnackBarText('bitte überprüfe deine Log In Daten')
       } else {
-        props.setUserData(resultUser.data[0]);
-
-        console.log(resultUser.data[0]);
-        props.setLogin(true);
+        dispatch(set_login(true));
+        dispatch(set_userData(resultUser.data[0]));
+        console.log(`\n\n\n----------------------------------------\n\n\n\n\n` + resultUser.data[0].firstName + ` loged in \n\n`);
+        
       }
     }
   }
@@ -65,13 +68,3 @@ const Login = ({ navigation, ...props }) => {
   )
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    setLogin: (loginState) =>
-      dispatch({ type: "SET_LOGIN", loginState: loginState }),
-    setUserData: (userData) =>
-      dispatch({ type: "SET_USERDATA", userData: userData })
-  };
-};
-
-export default connect(null, mapDispatchToProps)(Login);

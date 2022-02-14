@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react';
 import * as Font from 'expo-font';
 import { Text, View } from 'react-native';
 import NastedNavigator from './navigation/nastedNavigator';
+import store from './Store/store';
 
-import rootReducer from './Redux/Reducers/rootReducer';
-import { createStore } from 'redux';
+
 import { Provider } from 'react-redux';
 
-const store = createStore(rootReducer);
+
 
 // load fonts from assets packadge
 let customFonts = {
@@ -15,7 +15,7 @@ let customFonts = {
   'Roboto-regular': require('./assets/fonts/roboto-v29-latin-regular.ttf')
 }
 
-const App = ({ ...props }) => {
+function App () {
   const [fontsLoaded, setFontsLoadedStatus] = useState(false);
 
   async function _loadFontsAsync() {
@@ -30,6 +30,7 @@ const App = ({ ...props }) => {
   if (fontsLoaded) {
     return (
       // app entry point 
+
       <Provider store={store}>
         <NastedNavigator />
       </Provider>

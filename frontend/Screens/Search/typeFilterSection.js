@@ -1,28 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import { Text, View } from 'react-native';
 import { Badge, Chip } from 'react-native-paper';
+import CustomChip from '../../components/CustomChips';
 import CardsData from '../../data/CardsData';
 import { COLORS } from '../../Styles/colors';
 
 const helpData = [
   {
-    name: 'Hilfsangebote'
+    name: 'Hilfsangebot'
   },
   {
     name: 'Hilfsgesuche'
   }
 ]
 
-const TypeFilterSection = () => {
+const TypeFilterSection = ({addFilter}) => {
 
   return (
     <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'flex-start', paddingVertical: 10, marginBottom: 10 }}>
       {helpData.map((data, i) => (
-        <View key={i} style={{ position: 'relative', marginRight: 20 }}>
-          <Chip>
-            <Text>{data.name}</Text>
-          </Chip>
-        </View>
+        <CustomChip key={i} name={data.name} addFilter={addFilter} ></CustomChip>
       ))}
     </View>
   )
